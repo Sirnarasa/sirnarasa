@@ -47,9 +47,6 @@ gulp.task("css", () => (
     ]))
     .pipe(gulp.dest("./dist/css"))
     .pipe(browserSync.stream())
-    +  gulp.src(["./node_modules/netlify-cms/dist/*.*", "!./node_modules/netlify-cms/dist/*.html"])
- +    .pipe(gulp.dest("./dist"))
- +    .pipe(browserSync.stream())
 ));
 
 gulp.task("js", (cb) => {
