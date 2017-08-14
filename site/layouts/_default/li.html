@@ -1,0 +1,11 @@
+<div class="no-none pa3 bg-grey-1 br1 mb2 db raise w-100">
+<a href="{{ .Permalink }}">
+
+	<h2 class="f3 b lh-title mb1 primar ttc">{{ .Title }}</h2></a>
+	
+	{{ if .Params.image }}<a href="{{ .Permalink }}"><img class="w-100 dib measure f3 pb2" src="{{ .Params.image }}" alt="{{ .Title }}" /></a>{{ end }}
+	<p class="mid-gray lh-title mb2">{{ .Date.Format "2 Jan, 2006" }}</p>
+	<p class="mb0">{{ .Description }}</p>
+	<p class="link b dib mb0"><a href="{{ .Permalink }}">Selanjutnya.. <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a></p>
+
+</div>

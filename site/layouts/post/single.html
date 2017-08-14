@@ -1,0 +1,26 @@
+{{ partial "head" . }}
+{{ partial "nav" . }}
+
+<article class="baskerville pb5">
+<header class="avenir tc-l ph3 ph4-ns pt4 pt2-ns">
+    <h1 class="ttc f3 f2-m f-subheadline-l measure lh-title fw1 mt0"><strong>{{.Title}}</strong></h1><small class="f6 ttu tracked black">Oleh:<a href="/team-redaksi"> Team Redaksi</a>
+    <time class="f5 f4-l db fw1 baskerville mb4"> {{ .Date.Format "2 Jan, 2006" }} - sekitar {{ .ReadingTime }} menit dibaca</time></small>
+    {{ if .Params.image }}<img class="w-100 dib measure f3 pb2" src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
+  </header>
+  <div class="main main-raised">
+
+  <div class="ph3 ph4-m ph5-l">
+    <p class="f4 mb4 center measure lh-copy">
+      {{ .Description }} </p>
+    <div class="measure db center f5 f4-ns lh-copy">
+        {{ .Content }}
+      
+    </div>
+  </div>
+</article>
+
+<div class="tc mb3">
+			<a href="/post" class="btn btn-outline-warning raise">Artikel Lainnya <i class="fa fa-caret-right" aria-hidden="true"></i> 
+ </a></div>
+
+{{ partial "footer" . }}
